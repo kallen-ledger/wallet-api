@@ -3,19 +3,18 @@
   "version": "1.0.0",
   "license": "MIT",
   "main": "lib/index.js",
-  "module": "lib-es/index.js",
+  "module": "lib/index.mjs",
   "types": "lib/index.d.ts",
   "files": [
-    "/lib",
-    "/lib-es"
+    "/lib"
   ],
   "scripts": {
     "format:check": "prettier --check \"src\"",
     "format:fix": "prettier --write \"src\"",
     "lint": "eslint --cache --ext .ts \"src\"",
     "lint:fix": "eslint --cache --fix --ext .ts \"src\"",
-    "dev": "tsc -p prod.tsconfig.json --watch",
-    "build": "rm -rf lib/* lib-es/* && tsc -p prod.tsconfig.json && tsc -p prod-esm.tsconfig.json",
+    "dev": "tsup --watch",
+    "build": "tsup",
     "test": "jest"
   },
   "devDependencies": {
@@ -28,6 +27,7 @@
     "jest-shared-config": "workspace:*",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
+    "tsup": "^7.1.0",
     "typescript": "^5.0.4"
   },
   "dependencies": {

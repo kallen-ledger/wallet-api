@@ -4,15 +4,13 @@
   "description": "This package checks if your manifest.json file meets the requirements for Ledger wallet App manifest submission.",
   "license": "MIT",
   "main": "lib/index.js",
-  "module": "lib-es/index.js",
+  "module": "lib/index.mjs",
   "types": "lib/index.d.ts",
   "files": [
-    "/lib",
-    "/lib-es",
-    "/bin"
+    "/lib"
   ],
   "scripts": {
-    "build": "rm -rf bin/* lib/* lib-es/* && tsc -p prod.tsconfig.json && tsc -p prod-esm.tsconfig.json",
+    "build": "tsup",
     "format:check": "prettier --check \"src\" \"tests\"",
     "format:fix": "prettier --write \"src\"  \"tests\"",
     "lint": "eslint --cache --ext .ts \"src\"  \"tests\"",
@@ -29,6 +27,7 @@
     "prettier": "^2.8.8",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
+    "tsup": "^7.1.0",
     "typescript": "^5.0.4"
   },
   "dependencies": {

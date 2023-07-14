@@ -1,7 +1,6 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "./lib",
     "resolveJsonModule": true
   },
   "include": ["src/**/*", "jest.config.ts", "tests/**/*"]

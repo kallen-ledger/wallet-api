@@ -7,6 +7,7 @@ module.exports = {
     project: ["./tsconfig.json"],
     tsconfigRootDir: __dirname,
   },
+  ignorePatterns: ["lib/**/*"],
   rules: {
     "no-console": "off",
     "no-underscore-dangle": "off",

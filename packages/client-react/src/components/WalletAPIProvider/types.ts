@@ -5,6 +5,7 @@ import type {
   WalletAPIClient,
   WalletInfo,
 } from "@ledgerhq/wallet-api-client";
+import { ReactNode } from "react";
 
 export type Loadable<T> = {
   loading: boolean;
@@ -14,8 +15,8 @@ export type Loadable<T> = {
 };
 
 export type WalletAPIProviderProps = {
-  children: React.ReactElement;
   transport: Transport;
+  children: ReactNode;
 };
 
 export type WalletAPIProviderContextState = {
