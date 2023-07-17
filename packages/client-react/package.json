@@ -18,10 +18,8 @@
     "build": "tsup",
     "test": "jest"
   },
-  "dependencies": {
-    "@ledgerhq/wallet-api-client": "workspace:*"
-  },
   "devDependencies": {
+    "@ledgerhq/wallet-api-client": "workspace:*",
     "@types/jest": "^29.5.1",
     "@types/node": "^20.2.5",
     "@types/react": "^18.2.14",
@@ -37,6 +35,7 @@
     "typescript": "^5.0.4"
   },
   "peerDependencies": {
+    "@ledgerhq/wallet-api-client": "workspace:*",
     "@types/react": ">= 16.8.0 <= 18",
     "react": ">= 16.8.0 <= 18"
   }
